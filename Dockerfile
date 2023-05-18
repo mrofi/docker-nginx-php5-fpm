@@ -81,7 +81,6 @@ RUN sed -i -e "s/;listen.mode = 0660/listen.mode = 0750/g" /etc/php/5.6/fpm/pool
     mkdir /run/php
 
 COPY ./default.conf.tmpl /etc/nginx/sites-available/default.conf
-COPY ./metrics.conf /etc/nginx/sites-available/metrics.conf
 COPY ./supervisord.conf /etc/supervisord.conf
 COPY ./cmd.sh /
 COPY ./index.php /usr/share/nginx/html/public/index.php
